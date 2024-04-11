@@ -1,0 +1,16 @@
+isolinux
+genisoimage
+xorriso
+ipcalc
+sed
+libarchive-tools
+coreutils
+gzip
+qemu-system-x86
+qemu-utils
+openssh-client
+ovmf
+dpkg
+coreutils
+inetutils-telnet
+openssh-client

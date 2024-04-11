@@ -1,0 +1,16 @@
+--- boot/grub/grub.cfg	2023-12-10 18:58:00.000000000 +0100
++++ ../grub.cfg	2024-04-09 13:39:54.000000000 +0200
+@@ -30,6 +30,13 @@ fi
+ insmod play
+ play 960 440 1 0 4 440 1
+ set theme=/boot/grub/theme/1
++set timeout=7
++set default = 'Assimilated install'
++menuentry 'Assimilated install' {
++        set background_color=black
++        linux    /install.amd/vmlinuz ipv6.disable=1 auto=true priority=critical vga=788 lowmem/low=1 DEBCONF_DEBUG=5 --- quiet 
++        initrd   /install.amd/initrd.gz
++}
+ menuentry --hotkey=g 'Graphical install' {
+     set background_color=black
+     linux    /install.amd/vmlinuz vga=788 --- quiet 
