@@ -20,15 +20,15 @@ This system offers the following features:
 
 ### Initialization and first install
 
-    `bash generiso.sh;sync;sleep 1;bash kvm_terraform.sh`
+    bash generiso.sh;sync;sleep 1;bash kvm_terraform.sh
 
 ### System start command
 
-    `bash kvm_terraform.sh`
+    bash kvm_terraform.sh
 
 ### Login (passwords are disabled)
 
-    `ssh -i sshkeys/USERNAME.sshkey USERNAME@IPV4ADDRESS`
+    ssh -i sshkeys/USERNAME.sshkey USERNAME@IPV4ADDRESS
 
 **This repo is only a so-called demo version so some folder - for example borg_library - is not available.**
 
