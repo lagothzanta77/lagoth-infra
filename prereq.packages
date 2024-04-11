@@ -16,3 +16,4 @@ inetutils-telnet
 openssh-client
 bash
 patch
+sed
