@@ -8,7 +8,7 @@
 +set default = 'Assimilated install'
 +menuentry 'Assimilated install' {
 +        set background_color=black
-+        linux    /install.amd/vmlinuz ipv6.disable=1 auto=true priority=critical vga=788 lowmem/low=1 DEBCONF_DEBUG=5 --- quiet 
++        linux    /install.amd/vmlinuz ipv6.disable=1 auto=true preseed/file=/cdrom/borg.cfg priority=critical vga=788 lowmem/low=1 DEBCONF_DEBUG=5 --- quiet 
 +        initrd   /install.amd/initrd.gz
 +}
  menuentry --hotkey=g 'Graphical install' {
