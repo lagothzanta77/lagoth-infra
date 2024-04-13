@@ -30,8 +30,8 @@ This system offers the following features:
 
     ssh -i sshkeys/USERNAME.sshkey USERNAME@IPV4ADDRESS
 
-**This repo is only a so-called demo version so some folder
-- for example borg_library - is not available.**
+**This repo is only a so-called demo version so some folders are not available.**
+(for example borg_library)
 
 If you are interested in this topic you can search me on:
 
