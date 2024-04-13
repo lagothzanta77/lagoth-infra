@@ -18,7 +18,7 @@ This system offers the following features:
 
 ## Installation commands
 
-### Initialization and first install
+### Initialisation and first install
 
     bash generiso.sh;sync;sleep 1;bash kvm_terraform.sh
 
