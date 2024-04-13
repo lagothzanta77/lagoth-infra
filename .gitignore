@@ -1,10 +1,2 @@
-preseed.cfg
-sshkeys/
-*.iso
-*.qcow2
-kvm*m.sh
-*.deb
-assimilator/DEBIAN/*
-assimilator/lib/*
-assimilator/usr/lib/assimilator/assimilator.sh
-kvm_*.sh
+borg*/
+isos/

@@ -1,49 +1,29 @@
-# Debian Automated install
+# Automated Demo Infrastructure Installation
 
-This system offers the following features:
+The following systems will be installed automatically:
 
-  * Debian bookworm
-  * Authentication via SSH key for a single user
-  * Preconfigured nft firewall rules
-  * Manageable virtual machine via telnet and spice
-  * Disabled ipv6
-  * Disabled user passwords (include root)
-  * Pre-installed Terraform CLI
-  * Pre-installed kubectl CLI
+  * Debian Bookworm with Terraform CLI and kubectl binaries
 
 ## Requirements
 
   * Hypervisor (KVM with VDE recommended)
-  * Free space :-)
+  * Free disk space :-)
+  * `isos` folder for ISO files
 
-## Installation commands
+## Installation Commands (Optional Parameter with DNS Server)
 
-### Initialization and first install
+    bash lagoth-infra-demo.sh "192.255.255.255"
 
-    bash generiso.sh;sync;sleep 1;bash kvm_terraform.sh
+## More Information
 
-### System start command
+[Terramaster System](terraform_cli_vm/README.md)
 
-    bash kvm_terraform.sh
+## Known Bugs
 
-### Login (passwords are disabled)
+  * The `lowmem` boot parameter for Debian can cause `console-setup-linux` to become confused
 
-    ssh -i sshkeys/USERNAME.sshkey USERNAME@IPV4ADDRESS
+## Clean Code Guidelines
 
-**This repo is only a so-called demo version so some folder - for example borg_library - is not available.**
-
-If you are interested in this topic you can search me on [linkedin](https://hu.linkedin.com/in/zoltan-foldi-663797209?trk=people-guest_people_search-card)
-
-## Sources
-
-[Debian](https://www.debian.org/)
-
-[Terraform](https://www.terraform.io/)
-
-[Kubernetes](https://kubernetes.io/)
-
-[Debian Preseed Install Options](https://people.debian.org/~plessy/DebianInstallerDebconfTemplates.html)
-
-[Debian installer Boot parameters](https://www.debian.org/releases/buster/s390x/ch05s02.en.html)
-
-[Borg :-)](https://en.wikipedia.org/wiki/Borg)
+  * Max. length of a line in a bash script: 100
+  * Simple conditional permitted in one line
+  * Indentation of a bash script: `TAB`
