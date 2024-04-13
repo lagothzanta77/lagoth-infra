@@ -13,6 +13,5 @@ ovmf
 dpkg
 coreutils
 inetutils-telnet
-openssh-client
 bash
 patch
