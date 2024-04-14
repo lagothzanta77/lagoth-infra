@@ -3,6 +3,7 @@
 The following systems will be installed automatically:
 
   * Debian Bookworm with Terraform CLI and kubectl binaries
+  * Debian Bookworm as pre-configured iSCSI target
 
 ## Requirements
 

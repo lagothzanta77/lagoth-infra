@@ -1,0 +1,7 @@
+preseed.cfg
+sshkeys/
+*.qcow2
+kvm*.sh
+*.deb
+*.iso
+mytemper/
