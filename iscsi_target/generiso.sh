@@ -17,8 +17,13 @@ if [ "$BORG_DNS" = "" ];then
 fi
 BORG_ROUTER="192.168.0.254"
 BORG_SYSDISK="/dev/vda"
-# netmask is 30 for ISCSI target
-BORG_ISCSI_T_IP30="172.30.30.1"
+# netmask is 29 for ISCSI target
+BORG_ISCSI_T_IP29="172.30.30.1"
+
+# iscsi port bonding
+BORG_ISCSI_T2="172.30.30.2"
+BORG_ISCSI_T3="172.30.30.3"
+
 ### Variables end
 
 ### WARNING !!! 
@@ -34,7 +39,7 @@ if [ "$BORG_ISCSI_PWD" = "" ];then
     echo
     read -s -p "Please give the iSCSI Password again: " BORG_ISCSI_PWD2
     echo
-    if [ "$BORG_ISCSI_pwd" != "$BORG_ISCSI_pwd2" ];then
+    if [ "$BORG_ISCSI_PWD" != "$BORG_ISCSI_PWD2" ];then
 	echo "Passwords don't match."
         exit 1;
     fi
@@ -58,7 +63,7 @@ borg_prepare
 sync
 
 borg_late_script "$TMPDIR" "$ORIGINAL_ISO" "../borg_templates/late_script_template.sh" 	\
-    "$BORG_TF_CLI_USER" "assimilator" "$BORG_ISCSI_T_IP30" "$BORG_TERRAMASTER_IP"
+    "$BORG_TF_CLI_USER" "assimilator" "$BORG_ISCSI_T_IP29" "$BORG_TERRAMASTER_IP"
 borg_vminfo "$TMPDIR" "$BORG_TERRAFORMIP" "$BORG_NETMASK" "$BORG_ROUTER" "$BORG_DNS" 	\
     "$BORG_SYSDISK" "$BORG_TF_CLI_USER" "$SCR_ENDFILE"
 borg_grub_gen "$TMPDIR"

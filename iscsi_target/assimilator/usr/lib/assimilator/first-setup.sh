@@ -9,4 +9,6 @@ borg_iscsi_pkg
 borg_lvm_setup
 borg_iscsi_setup
 
+borg_iscsi_netbonding
+
 borg_msg
