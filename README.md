@@ -4,12 +4,14 @@ The following systems will be installed automatically:
 
   * Debian Bookworm with Terraform CLI and kubectl binaries
   * Debian Bookworm as pre-configured iSCSI target
+  * VMware ESX(i) 6.7 standalone host
 
 ## Requirements
 
   * Hypervisor (KVM with VDE recommended)
   * Free disk space :-)
   * `isos` folder for ISO files
+  * `esxi_update` folder for ESXI Update ZIP
 
 ## Installation Commands (Optional Parameter with DNS Server)
 
@@ -18,6 +20,10 @@ The following systems will be installed automatically:
 ## More Information
 
 [Terramaster System](terraform_cli_vm/README.md)
+
+[iSCSI target System](iscsi_target/README.md)
+
+[VMware ESX(i) System](esxi_host/README.md)
 
 ## Known Bugs
 

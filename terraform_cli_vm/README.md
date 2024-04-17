@@ -7,9 +7,11 @@ This system offers the following features:
   * Preconfigured nft firewall rules
   * Manageable virtual machine via telnet and spice
   * Disabled ipv6
+  * +1 network interface (for ESX(i) Management Network)
   * Disabled user passwords (include root)
   * Pre-installed Terraform CLI
   * Pre-installed kubectl CLI
+  * Pre-installed small static webserver for VMware ESX(i) files
 
 ## Requirements
 

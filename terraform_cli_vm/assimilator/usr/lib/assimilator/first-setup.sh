@@ -2,8 +2,6 @@
 
 . /usr/lib/assimilator/borg_end.sh
 
-borg_ssh
-
 logger "$HOSTNAME: installing terraform and kubectl by this assimilator service"
 
 KUBE_DEB='deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg]'
@@ -25,5 +23,11 @@ echo "$KUBE_DEB" | tee /etc/apt/sources.list.d/kubernetes.list
 chmod 644 /etc/apt/sources.list.d/kubernetes.list
 apt -y update
 apt -y install kubectl terraform
+
+borg_netsetup
+
+borg_esxi_webresources
+
+borg_ssh
 
 borg_msg

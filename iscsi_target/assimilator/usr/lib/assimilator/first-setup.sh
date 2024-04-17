@@ -2,7 +2,7 @@
 
 . /usr/lib/assimilator/borg_end.sh
 
-borg_iscsi_netsetup
+borg_netsetup
 borg_ssh
 borg_iscsi_pkg
 

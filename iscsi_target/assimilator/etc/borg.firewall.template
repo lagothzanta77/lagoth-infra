@@ -17,15 +17,15 @@ add chain ip filter INPUT { type filter hook input priority 0; policy drop; }
 add chain ip filter FORWARD { type filter hook forward priority 0; policy drop; }
 add chain ip filter OUTPUT { type filter hook output priority 0; policy drop; }
 add rule ip filter INPUT iifname "lo" counter accept
-add rule ip filter INPUT iiftype ether iifname != "BORG_ISCSI_NET" icmp type time-exceeded counter accept
-add rule ip filter INPUT iiftype ether iifname != "BORG_ISCSI_NET" icmp type echo-reply counter accept
-add rule ip filter INPUT iiftype ether iifname "BORG_ISCSI_NET" ip protocol icmp counter accept
-add rule ip filter INPUT iiftype ether iifname "BORG_ISCSI_NET" tcp sport 1024-65535 tcp dport { 860,3260 } ct state new,related,established counter accept
-add rule ip filter INPUT iiftype ether iifname != "BORG_ISCSI_NET" ip saddr 192.168.0.221 tcp sport 1024-65535 tcp dport 22 ct state new,related,established counter accept
+add rule ip filter INPUT iiftype ether iifname "BORG_FST_NET" icmp type time-exceeded counter accept
+add rule ip filter INPUT iiftype ether iifname "BORG_FST_NET" icmp type echo-reply counter accept
+add rule ip filter INPUT iiftype ether iifname != "BORG_FST_NET" ip protocol icmp counter accept
+add rule ip filter INPUT iiftype ether iifname != "BORG_FST_NET" tcp sport 1024-65535 tcp dport { 860,3260 } ct state new,related,established counter accept
+add rule ip filter INPUT iiftype ether iifname != "BORG_FST_NET" ip saddr BORG_TERRAIP tcp sport 1024-65535 tcp dport 22 ct state new,related,established counter accept
 add rule ip filter INPUT iiftype ether ct state related,established counter accept
 add rule ip filter OUTPUT oifname "lo" counter accept
 add rule ip filter OUTPUT oiftype ether ip protocol icmp counter accept
-add rule ip filter OUTPUT oiftype ether oifname !="BORG_ISCSI_NET" ip daddr 192.168.0.221 tcp sport 22 tcp dport 1024-65535 ct state related,established counter accept
-add rule ip filter OUTPUT oiftype ether oifname "BORG_ISCSI_NET" tcp sport { 860, 3260 } tcp dport 1024-65535 ct state related,established counter accept
+add rule ip filter OUTPUT oiftype ether oifname "BORG_FST_NET" ip daddr BORG_TERRAIP tcp sport 22 tcp dport 1024-65535 ct state related,established counter accept
+add rule ip filter OUTPUT oiftype ether oifname != "BORG_FST_NET" tcp sport { 860, 3260 } tcp dport 1024-65535 ct state related,established counter accept
 add rule ip filter OUTPUT oiftype ether tcp sport 1024-65535 ct state new,related,established counter accept
-add rule ip filter OUTPUT oiftype ether oifname != "BORG_ISCSI_NET "udp dport 53 ct state new,related,established counter accept
+add rule ip filter OUTPUT oiftype ether oifname "BORG_FST_NET "udp dport 53 ct state new,related,established counter accept

@@ -17,7 +17,6 @@ if [ "$BORG_DNS" = "" ];then
 fi
 BORG_ROUTER="192.168.0.254"
 BORG_SYSDISK="/dev/vda"
-BORG_ISCSI_NET_HW="52:54:00:12:c4:02"
 # netmask is 30 for ISCSI target
 BORG_ISCSI_T_IP30="172.30.30.1"
 ### Variables end
@@ -67,7 +66,6 @@ borg_iso_changer "$TMPDIR" "$NEW_ISO"
 
 sed -e "s@BORG_ISO@$NEW_ISO@g" 		 							\
     -e "s@BORG_USER@$BORG_TF_CLI_USER@g" 							\
-    -e "s@BORG_ISCSIMAC@$BORG_ISCSI_NET_HW@g" 							\
     -e "s@terraformclient@iscsitarget@g" 							\
     -e "s@BORG_IP@$BORG_TERRAFORMIP@g" ../borg_templates/kvm_iscsi_template.sh > kvm_terraform.sh
 
