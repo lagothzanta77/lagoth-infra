@@ -1,0 +1,12 @@
+# Bonding interfész létrehozása
+nmcli con add type bond con-name bond0 ifname bond0 mode balance-xor miimon 100 updelay 200 downdelay 200
+
+# Hálózati interfészek hozzáadása a bondinghoz
+nmcli con add type ethernet con-name "Wired connection 1" ifname enp0s3 master bond0
+nmcli con add type ethernet con-name "Wired connection 2" ifname enp0s3 master bond0
+nmcli con add type ethernet con-name "Wired connection 3" ifname enp0s3 master bond0
+
+# IP cím beállítása a bonding interfészhez
+nmcli con mod bond0 ipv4.addresses 172.30.30.6/29
+nmcli con up bond0
+

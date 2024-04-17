@@ -23,6 +23,7 @@ BORG_ISCSI_T_IP29="172.30.30.1"
 # iscsi port bonding
 BORG_ISCSI_T2="172.30.30.2"
 BORG_ISCSI_T3="172.30.30.3"
+BORG_ISCSI_BOND="172.30.30.6"
 
 ### Variables end
 
@@ -34,16 +35,8 @@ BORG_ISCSI_T3="172.30.30.3"
 echo "This is a BORG assimilation :-) script to create a Debian"\
     "installer to an ISCSI target from scratch."
 
-if [ "$BORG_ISCSI_PWD" = "" ];then
-    read -s -p "Please give the iSCSI Password: " BORG_ISCSI_PWD
-    echo
-    read -s -p "Please give the iSCSI Password again: " BORG_ISCSI_PWD2
-    echo
-    if [ "$BORG_ISCSI_PWD" != "$BORG_ISCSI_PWD2" ];then
-	echo "Passwords don't match."
-        exit 1;
-    fi
-fi
+# Replace this password if you really want to do this.
+BORG_ISCSI_PWD=assimilated
 
 borg_ipchecker "$BORG_ISCSI_T_IP30/30"
 

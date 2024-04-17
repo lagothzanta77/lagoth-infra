@@ -20,6 +20,7 @@ Terraform CLI system
   * Hypervisor (KVM with VDE recommended)
   * Very large free space :-)
   * [Terramaster VM](../terraform_cli_vm/README.md) (for SSH tunnel)
+  * Pre-defined iSCSI Password in `generiso.iso`
 
 ## Installation commands
 
