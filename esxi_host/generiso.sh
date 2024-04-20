@@ -5,6 +5,8 @@
 ORIGINAL_ISO="../isos/esxi.iso"
 NEW_ISO="../isos/borgesxi.iso"
 TMPDIR="mytemper"
+BORG_TF_CLI_USER=$(grep "^BORG_TF_CLI_USER" terraform_cli_vm/generiso.sh | tr -d '"~' \
+    | cut -d"=" -f2)
 
 # This must be in the same subnet as 'TERRAFORM_ESXI_IP'.
 ESXI_MGMT_IP=172.30.100.2
@@ -29,7 +31,7 @@ borg_esxi_isoprep
 genisoimage -relaxed-filenames -V BORG-ESXI-67-ISO -A ESXIMAGE 			\
     -o "$NEW_ISO" -b ISOLINUX.BIN -c BOOT.CAT 					\
     -no-emul-boot -boot-load-size 4 -boot-info-table -eltorito-alt-boot 	\
-    -e EFIBOOT.IMG -no-emul-boot "$TMPDIR"
+    -e EFIBOOT.IMG -no-emul-boot "$TMPDIR" 2>/dev/null
 
 rm -rf $TMPDIR
 
