@@ -18,6 +18,7 @@ ESXI_NONEXISTED_GATEWAY=172.30.100.6
 # These must be in the same subnet. (netmask: 29).
 ESXI_ISCSI_IP1=172.30.30.4
 ESXI_ISCSI_IP2=172.30.30.5
+ESXI_ISCSI_IP3=172.30.30.6
 
 # ESXI UPDATE FILE (ZIP) MUST IN `../esxi_update` as: 'esxupd.zip'.
 

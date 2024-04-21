@@ -8,7 +8,7 @@ ESXISSH_WEB=33055
 
 cd terraform_cli_vm >/dev/null
 if [ ! -e kvm_terraform.sh ];then
-    bash generiso.sh "$BORG_DNS"
+    bash generiso.sh
 fi
 sync;sleep 1;bash kvm_terraform.sh
 cd - >/dev/null
@@ -30,14 +30,14 @@ ESXI_IP=$(grep "^ESXI_MGMT_IP" esxi_host/generiso.sh | tr -d '"~' 	\
 
 cd iscsi_target >/dev/null
 if [ ! -e kvm_terraform.sh ];then
-    bash generiso.sh "$BORG_DNS"
+    bash generiso.sh
 fi
 sync;sleep 1;bash kvm_terraform.sh
 cd - >/dev/null
 
 cd esxi_host >/dev/null
 if [ ! -e kvm_terraform.sh ];then
-    bash generiso.sh "$BORG_DNS"
+    bash generiso.sh
 fi
 sync;sleep 1;bash kvm_terraform.sh
 cd - >/dev/null

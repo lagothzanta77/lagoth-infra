@@ -23,7 +23,6 @@ BORG_ISCSI_T_IP29="172.30.30.1"
 # iscsi port bonding
 BORG_ISCSI_T2="172.30.30.2"
 BORG_ISCSI_T3="172.30.30.3"
-BORG_ISCSI_BOND="172.30.30.6"
 
 ### Variables end
 
@@ -37,8 +36,6 @@ echo "This is a BORG assimilation :-) script to create a Debian"\
 
 # Replace this password if you really want to do this.
 BORG_ISCSI_PWD=assimilated
-
-borg_ipchecker "$BORG_ISCSI_T_IP30/30"
 
 # Searching terramaster admin system...
 if [ -e ../terraform_cli_vm ];then
