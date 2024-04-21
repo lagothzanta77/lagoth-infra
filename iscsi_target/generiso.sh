@@ -20,10 +20,6 @@ BORG_SYSDISK="/dev/vda"
 # netmask is 29 for ISCSI target
 BORG_ISCSI_T_IP29="172.30.30.1"
 
-# iscsi port bonding
-BORG_ISCSI_T2="172.30.30.2"
-BORG_ISCSI_T3="172.30.30.3"
-
 ### Variables end
 
 ### WARNING !!! 

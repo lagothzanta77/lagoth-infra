@@ -5,7 +5,7 @@
 ORIGINAL_ISO="../isos/esxi.iso"
 NEW_ISO="../isos/borgesxi.iso"
 TMPDIR="mytemper"
-BORG_TF_CLI_USER=$(grep "^BORG_TF_CLI_USER" terraform_cli_vm/generiso.sh | tr -d '"~' \
+BORG_TF_CLI_USER=$(grep "^BORG_TF_CLI_USER" ../terraform_cli_vm/generiso.sh | tr -d '"~' \
     | cut -d"=" -f2)
 
 # This must be in the same subnet as 'TERRAFORM_ESXI_IP'.
