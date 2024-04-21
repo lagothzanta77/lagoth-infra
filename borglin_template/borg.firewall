@@ -1,0 +1,28 @@
+add table ip mangle
+add chain ip mangle PREROUTING { type filter hook prerouting priority -150; policy accept; }
+add chain ip mangle INPUT { type filter hook input priority -150; policy accept; }
+add chain ip mangle FORWARD { type filter hook forward priority -150; policy accept; }
+add chain ip mangle OUTPUT { type route hook output priority -150; policy accept; }
+add chain ip mangle POSTROUTING { type filter hook postrouting priority -150; policy accept; }
+add rule ip mangle PREROUTING ct state invalid counter drop
+add rule ip mangle PREROUTING tcp flags 0x0 / fin,syn,rst,psh,ack,urg counter drop
+add rule ip mangle PREROUTING tcp flags != syn / fin,syn,rst,ack ct state new counter drop
+add rule ip mangle PREROUTING tcp flags fin,syn,rst,psh,ack,urg / fin,syn,rst,psh,ack,urg counter drop
+add table ip raw
+add chain ip raw PREROUTING { type filter hook prerouting priority -300; policy accept; }
+add chain ip raw OUTPUT { type filter hook output priority -300; policy accept; }
+add rule ip raw PREROUTING fib saddr . iif oif 0 counter drop
+add table ip filter
+add chain ip filter INPUT { type filter hook input priority 0; policy drop; }
+add chain ip filter FORWARD { type filter hook forward priority 0; policy drop; }
+add chain ip filter OUTPUT { type filter hook output priority 0; policy drop; }
+add rule ip filter INPUT iifname "lo" counter accept
+add rule ip filter INPUT iiftype ether icmp type time-exceeded counter accept
+add rule ip filter INPUT iiftype ether icmp type echo-reply counter accept
+add rule ip filter INPUT iiftype ether tcp sport 1024-65535 tcp dport 22 ct state new,related,established counter accept
+add rule ip filter INPUT iiftype ether ct state related,established counter accept
+add rule ip filter OUTPUT oifname "lo" counter accept
+add rule ip filter OUTPUT oiftype ether ip protocol icmp counter accept
+add rule ip filter OUTPUT oiftype ether tcp sport 22 tcp dport 1024-65535 ct state related,established counter accept
+add rule ip filter OUTPUT oiftype ether tcp sport 1024-65535 ct state new,related,established counter accept
+add rule ip filter OUTPUT oiftype ether udp dport 53 ct state new,related,established counter accept

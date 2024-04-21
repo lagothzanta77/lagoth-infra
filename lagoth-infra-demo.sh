@@ -6,6 +6,12 @@ TERRASSH_PORT=33053
 ESXISSH_PORT=33054
 ESXISSH_WEB=33055
 
+cd borglin_template >/dev/null
+if [ ! -e preseed.cfg ];then
+    bash generiso.sh
+fi
+cd - > /dev/null
+
 cd terraform_cli_vm >/dev/null
 if [ ! -e kvm_terraform.sh ];then
     bash generiso.sh
