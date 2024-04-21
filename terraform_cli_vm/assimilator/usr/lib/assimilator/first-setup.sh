@@ -29,5 +29,3 @@ borg_netsetup
 borg_esxi_webresources
 
 borg_ssh
-
-borg_msg
