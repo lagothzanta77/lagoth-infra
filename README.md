@@ -25,6 +25,8 @@ The following systems will be installed automatically:
 
 [VMware ESX(i) System](esxi_host/README.md)
 
+[Terraform Provider ESXI plugin (by josenk)](https://github.com/josenk/terraform-provider-esxi)
+
 ## Known Bugs
 
   * The `lowmem` boot parameter for Debian can cause `console-setup-linux` to become confused

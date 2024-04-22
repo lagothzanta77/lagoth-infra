@@ -12,13 +12,13 @@ This system offers the following features:
   * Disabled ipv6
   * Pre-installed update patch
   * Disabled Internet connection for ESXi Host
+  * Preconfigured a Linux VM as Template
 
 ## Requirements
 
   * Hypervisor (KVM with VDE recommended)
   * Free disk space :-)
   * [Terramaster VM](../terraform_cli_vm/README.md)
-
 
 ## Installation commands
 

@@ -45,6 +45,8 @@ If you are interested in this topic you can search me on:
 
 [Terraform](https://www.terraform.io/)
 
+[Terraform Provider ESXi Plugins by josenk](https://github.com/josenk/terraform-provider-esxi)
+
 [Kubernetes](https://kubernetes.io/)
 
 [Debian Preseed Install Options](https://people.debian.org/~plessy/DebianInstallerDebconfTemplates.html)

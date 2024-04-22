@@ -9,7 +9,7 @@ Terraform CLI system
   * Manageable virtual machine via telnet and spice
   * Disabled ipv6
   * Disabled user passwords (include root)
-  * +1 network interface (for iSCSI traffic)
+  * +3 network interface (for iSCSI traffic)
   * +3 virtual SCSI disks for iSCSI with different size
   * +1 empty virtual SCSI port (for hotswapping)
   * Pre-installed targetcli-fb
