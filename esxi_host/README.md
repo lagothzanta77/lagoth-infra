@@ -2,7 +2,7 @@
 
 This system offers the following features:
 
-  * VMware ESX(i) 6.7 
+  * VMware ESX(i) 6.7
   * Enabled SSH only via [Terramaster](../terraform_cli_vm/README.md) system
   * Enabled WEB UI via [Terramaster](../terraform_cli_vm/README.md) system
   * Enabled iSCSI Software Interface
@@ -34,10 +34,10 @@ This system offers the following features:
 
     ssh -p SSHTUNNELPORT root@127.0.0.1
 
-**This repo is only a so-called demo version so some folders are not available.**
+**This repo is only a demo version so some folders are not available.**
 (for example borg_library)
 
-If you are interested in this topic you can search me on:
+If you are interested in this topic you can find me on:
 
   * [linkedin](https://hu.linkedin.com/in/zoltan-foldi-663797209?trk=people-guest_people_search-card)
 

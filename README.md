@@ -27,6 +27,10 @@ The following systems will be installed automatically:
 
 [Terraform Provider ESXI plugin (by josenk)](https://github.com/josenk/terraform-provider-esxi)
 
+## Videos
+
+  * [Youtube video links of the setup and usage of this infrastructure](install_demo.md)
+
 ## Known Bugs
 
   * The `lowmem` boot parameter for Debian can cause `console-setup-linux` to become confused
