@@ -15,7 +15,7 @@
 
 ## Configuration section
 
-| title                                                                                                                                       | startpos (hh:mm)| endpos(hh:mm)| length (min)|
+| title                                                                                                                                       | startpos (hh:mm)| endpos (hh:mm)| length (min)|
 |---------------------------------------------------------------------------------------------------------------------------------------------|-----------------|--------------|-------------|
 | [Define the new installed virtual disk on iSCSI target to expand a datastore](https://youtu.be/lfvwqTEYyfw)                                 | 01:13           | 01:23        | 10          |
 | [Create the borgVM 01 using Terraform on the BorgESXi](https://youtu.be/9JP7zjMLyZI)                                                        | 01:23           | 01:36        | 13          |
