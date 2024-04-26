@@ -1,8 +1,10 @@
 # VMware ESX(i) Automated install youtube videos with Terrafrom admin workstation and iSCSI target in ~75 minutes and some configuration check and example usage in ~35 minutes
 
+ * [Host HW configuration](https://linux-hardware.org/?probe=3eafc2c647)
+
 ## Automated section (except the adding of the new virtual disk on the iSCSI target)
 
-| title                                                                                                                | startpos (hh:mm)| endpos(hh:mm)| length (min)|
+| title                                                                                                                | startpos (hh:mm)| endpos (hh:mm)| length (min)|
 |----------------------------------------------------------------------------------------------------------------------|-----------------|--------------|-------------|
 | [Start the script to prepare the Template VM and create the Terraform admin client...](https://youtu.be/1RBBLMw1hkI) | 00:00           | 00:03        | 03          |
 | [...Complete the setup of the admin client](https://youtu.be/3m0lNve5l9s)                                            | 00:07           | 00:14        | 07          |
