@@ -14,10 +14,6 @@ variable "vm_gateway" {
   default = "192.168.0.254"
 }
 
-variable "vm_portgroup" {
-  default = "PHYSLAN"
-}
-
 variable "nameserver" {
-  sensitive   = true
+  sensitive = true
 }

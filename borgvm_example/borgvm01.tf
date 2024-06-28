@@ -33,7 +33,7 @@ resource "esxi_guest" "borgvm01" {
   ovf_source        = "/home/terramaster/mount/volumes/borgosstore/borgLinTemplate/borgLinTemplate.vmx"
 
   network_interfaces {
-    virtual_network = var.vm_portgroup
+    virtual_network = esxi_portgroup.phys.name
   }
 
   guestinfo = {
@@ -42,4 +42,9 @@ resource "esxi_guest" "borgvm01" {
     "userdata.encoding" = "gzip+base64"
     "userdata"          = base64gzip(data.template_file.cloud-userdata.rendered)
   }
+
+  depends_on = [
+    esxi_portgroup.phys
+ ]
+
 }
