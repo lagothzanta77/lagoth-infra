@@ -27,6 +27,11 @@ The following systems will be installed automatically:
 
 [Terraform Provider ESXI plugin (by josenk)](https://github.com/josenk/terraform-provider-esxi)
 
+## Extras
+
+  * [Debian ISO installer to create a template from scratch](borglin_template/generiso.sh)
+  * [Windows Server ISO installer to create a template from scratch](borgwin_template/README.md)
+
 ## Videos
 
   * [Youtube video links of the setup and usage of this infrastructure](install_demo.md)

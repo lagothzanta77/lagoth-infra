@@ -1,0 +1,12 @@
+*.msi
+*.msu
+*.oem
+*.inf
+transwarp.sh
+*.key
+*.cfg
+*.xml
+*.exe
+*.txt
+*.cat
+*.sys
