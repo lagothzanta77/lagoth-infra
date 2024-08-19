@@ -1,0 +1,8 @@
+*.tfst*
+./terrafor*/*
+.terraf*
+000*files/*
+inputfiles/*
+*.myplan
+*.mytest
+

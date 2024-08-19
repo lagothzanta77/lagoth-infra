@@ -31,6 +31,7 @@ The following systems will be installed automatically:
 
   * [Debian ISO installer to create a template from scratch](borglin_template/generiso.sh)
   * [Windows Server ISO installer to create a template from scratch](borgwin_template/README.md)
+  * [Automated Install of a small Windows AD environment from scratch](windowsad_example/README.md) 
 
 ## Videos
 
