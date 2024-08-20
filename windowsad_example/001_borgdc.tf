@@ -82,7 +82,8 @@ resource "esxi_guest" "borgdc1" {
   }
 
   depends_on			= [
-    esxi_portgroup.phys
+    esxi_portgroup.phys,
+    esxi_guest.wintemplate
  ]
 
 }
