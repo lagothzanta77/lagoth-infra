@@ -17,6 +17,10 @@
   * Disabled IPv6
   * Disabled NetBIOS over TCP (on Windows servers)
 
+## Resource Topology
+
+![topology](topology.png)
+
 ### Example AD config
 
   * Enable AD Recycle bin
