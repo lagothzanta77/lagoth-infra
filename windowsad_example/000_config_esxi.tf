@@ -18,8 +18,4 @@ resource "terraform_data"  "config_esxi" {
     ]
   }
 
-  depends_on			= [
-    esxi_vswitch.physswitch
-  ]
-
 }
