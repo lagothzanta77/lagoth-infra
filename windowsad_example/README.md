@@ -83,8 +83,8 @@
 
 ### Part 1 - Deploying the templates
 
-    [!NOTE]
-    esxi_virtual_disk.dcdisk is not needed to create template
+[!NOTE]
+esxi_virtual_disk.dcdisk is not needed to create template
 
 
 | title                                                                                                                | startpos (hh:mm)| endpos (hh:mm)| length (min)|
