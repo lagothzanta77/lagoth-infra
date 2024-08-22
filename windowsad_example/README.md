@@ -75,7 +75,7 @@
  3. [000_isoimages.tf](000_isoimages.tf)                                                               : Simple delaying tool until the iso files will be arrived in the ESXi Datastore
  4. [000_borgLinTemplate.tf](000_borgLinTemplate.tf), [000_borgWinTemplate.tf](000_borgWinTemplate.tf) : Deploy the Template VMs
  5. [001_borgdc.tf](001_borgdc.tf) with [borgdc_files](borgdc_files)                                   : Deploy the AD Forest with one Domain Controller
- 6. [002_borgadmdocker.tf](002_borgadmdocker.tf) with [borgadmdckr_files](borgadmdckr_files)           : Deploy the Windows Server with Admin Center and join to the AD
+ 6. [002_borgadmdocker.tf](002_borgadmdocker.tf) with [borgadmdckr_files](borgadmdckr_files)           : Deploy the Windows Server with Admin Center and join it to the AD
  7. [002_borglinsrv1.tf](002_borglinsrv1.tf)                                                           : Deploy the Debian/GNU Linux server
  8. [003_adconfig_example.tf](003_adconfig_example.tf) with [scriptfiles](003_adconfig_example_files)  : Join the Linux server to the AD, install docker on the Windows Server and do some config on the Domain Controller.
 
@@ -83,7 +83,17 @@
 
 ### Part 1 - Deploying the templates
 
-TODO
+    [!NOTE]
+    esxi_virtual_disk.dcdisk is not needed to create template
+
+
+| title                                                                                                                | startpos (hh:mm)| endpos (hh:mm)| length (min)|
+|----------------------------------------------------------------------------------------------------------------------|-----------------|--------------|-------------|
+| [Check the ESXI environment and create ISO files](https://youtu.be/7Oe1Mn3Vb3oI)                                     | 00:00           | 00:14        | 14          |
+| [Create templates from ISO files](https://youtu.be/DpMM03b9Trw)                                                      | 00:14           | 00:27        | 13          |
+| [Prepare Windows Server Template](https://youtu.be/ckC0AhoefPs)                                                      | 00:27           | 00:32        | 05          |
+| [Complete Windows Server Template](TODO)                                                                             | 01:00           | 01:17        | 17          |
+
 
 ### Part 2 - Deploying the guestVMs
 
