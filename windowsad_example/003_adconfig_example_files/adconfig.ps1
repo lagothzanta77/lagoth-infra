@@ -11,6 +11,6 @@ catch {
 New-ADOrganizationalUnit -Name Servers
 Start-Sleep 1
 $list=(Get-ADComputer -Filter * | Where-Object DistinguishedName -Notlike "*Domain Controller*").ObjectGUID
-$mytarget=$targets="OU=Servers,"+(Get-ADDomainController).DefaultPartition
+$mytarget="OU=Servers,"+(Get-ADDomainController).DefaultPartition
 foreach ( $myitem in $list ) { Move-ADObject -Identity $myitem -Targetpath "$mytarget" }
 

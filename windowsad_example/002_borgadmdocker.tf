@@ -6,7 +6,7 @@ data "template_file" "cloud-userdata_windocker" {
     NSNAME			= var.dc1_name
     ETHNAME			= var.dc_ethname
     ADMPORT			= var.admincenter_port
-    DCADMIN			= var.dc_admin
+    DCADMIN			= local.dcadmin
   }
 }
 

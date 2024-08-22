@@ -21,7 +21,7 @@ if ( Test-Path -Path c:\borgfiles\assimilated.conf ) {
 }
 
 if ( -Not ( Test-Path -Path c:\borgfiles\ad.done ) ) {
-    `$userName = "${DCADMIN}@${DCNAME}"
+    `$userName = "${DCADMIN}"
     `$borgKey = [byte]1..32
     `$SecurePassword = Get-Content c:\borgfiles\borgwin.key | ConvertTo-SecureString -Key `$borgKey
     `$credObject = New-Object System.Management.Automation.PSCredential (`$userName, `$SecurePassword)
