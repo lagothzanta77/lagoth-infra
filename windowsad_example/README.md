@@ -92,18 +92,18 @@
 | [Check the ESXI environment and create ISO files](https://youtu.be/7Oe1Mn3Vb3oI)                                     | 00:00           | 00:14        | 14          |
 | [Create templates from ISO files](https://youtu.be/DpMM03b9Trw)                                                      | 00:14           | 00:27        | 13          |
 | [Prepare Windows Server Template...](https://youtu.be/ckC0AhoefPs)                                                   | 00:27           | 00:32        | 05          |
-| [...Complete Windows Server Template](TODO)                                                                          | 01:00           | 01:17        | 17          |
+| [...Complete Windows Server Template](https://youtu.be/NmXQihEiryA)                                                  | 01:00           | 01:17        | 17          |
 
 
 ### Part 2 - Deploying the guestVMs
 
 
-| title                                                                                                                | startpos (hh:mm)| endpos (hh:mm)| length (min)|
-|----------------------------------------------------------------------------------------------------------------------|-----------------|--------------|-------------|
-| [Check the ESXI environment and create Domain Controller VM...](TODO)                                                | 00:00           | 00:05        | 05          |
-| [...Start the Domain Controller VM...](TODO)                                                                         | 00:18           | 00:05        | 05          |
-| [...Complete the DC...](TODO)                                                                                        | 00:23           | 00:32        | 09          |
-| [...Complete the Windows Server to use Windows Admin Center...](TODO)                                                | 00:35           | 00:48        | 13          |
-| [...Complete the deployment and test the Windows Admin Center](TODO)                                                 | 00:49           | 01:00        | 11          |
-| [Check the AD environment with Windows 10 RSAT modules and shut down the infrastructure](TODO)                       | 01:00           | 01:15        | 15          |
+| title                                                                                                                 | startpos (hh:mm)| endpos (hh:mm)| length (min)|
+|-----------------------------------------------------------------------------------------------------------------------|-----------------|--------------|-------------|
+| [Check the ESXI environment and create Domain Controller VM...](https://youtu.be/5xu2V_pn8Sc)                         | 00:00           | 00:05        | 05          |
+| [...Start the Domain Controller VM...](https://youtu.be/ILRn8oWo5ug)                                                  | 00:18           | 00:05        | 05          |
+| [...Complete the DC...](https://youtu.be/hlyxjGJGUFE)                                                                 | 00:23           | 00:32        | 09          |
+| [...Complete the Windows Server to use Windows Admin Center...](https://youtu.be/k2pxW-EK4Us)                         | 00:35           | 00:48        | 13          |
+| [...Complete the deployment and test the Windows Admin Center](https://youtu.be/MPY0Z0QxJqU)                          | 00:49           | 01:00        | 11          |
+| [Check the AD environment with Windows 10 RSAT modules and shut down the infrastructure](https://youtu.be/jGsAEJZ8c5s)| 01:00           | 01:15        | 15          |
 
