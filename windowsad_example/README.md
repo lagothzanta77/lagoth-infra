@@ -13,7 +13,7 @@
   * AD integrated [DNS](https://en.wikipedia.org/wiki/Domain_Name_System) Server
   * AD integrated [DHCP](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol) Server with a configured Scope
   * [Windows Admin Center](https://www.microsoft.com/en-us/windows-server/windows-admin-center)
-  * [Docker CE (Windows version)](https://github.com/microsoft/Windows-Containers/tree/Main/helpful_tools/Install-DockerCE) to use nano server containers)
+  * [Docker CE (Windows version)](https://github.com/microsoft/Windows-Containers/tree/Main/helpful_tools/Install-DockerCE) to use nano server containers
   * Disabled IPv6
   * Disabled NetBIOS over TCP (on Windows servers)
 

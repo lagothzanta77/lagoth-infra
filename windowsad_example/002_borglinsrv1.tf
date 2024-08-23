@@ -4,7 +4,6 @@ data "template_file" "cloud-linuserdata" {
     HOSTNAME			= var.lin1_name
     SSHPUB			= local.sshpubkey
     NS				= var.dc1_winip_pure
-    DCKEY			= filebase64("inputfiles/dc.key")
     WSMANFILE			= filebase64("borg_linsrv_files/wsman.ps1")
     CONFIGFILE			= filebase64("borg_linsrv_files/borgconfig.sh")
     REMOTEPSFILE		= filebase64("borg_linsrv_files/remoteps.ps1")
