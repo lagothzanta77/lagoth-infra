@@ -10,6 +10,8 @@ data "template_file" "cloud-linuserdata" {
     KERBEROSFILE		= filebase64("borg_linsrv_files/keytab.sh")
     ADMINUSER			= var.dc_admin
     BORGADMIN			= var.linadmin
+    DCNAME			= var.dc_name
+    REGDNSFILE			= filebase64("borg_linsrv_files/registerdns.sh")
   }
 }
 
@@ -18,7 +20,6 @@ data "template_file" "cloud-linmetadata" {
     vars = {
       ipAddress			= local.linsrv1ip
       gateway			= var.phys_gateway
-      nameserver		= var.dc1_winip_pure
     }
 }
 

@@ -17,6 +17,7 @@ resource "terraform_data"  "ad_config" {
   provisioner "remote-exec" {
     inline			= [
 	"kinit -kt ${local.keytabfile} ${local.dcadmin}",
+	"bash /srv/registerdns.sh ${var.dc1_name} >/home/${var.linadmin}/adconfig/adconfig.log",
 	"pwsh /srv/remoteps.ps1 ${var.dc1_name}.${var.dc_name} /home/${var.linadmin}/adconfig/adconfig.ps1 >/home/${var.linadmin}/adconfig/adconfig.log",
 	"pwsh /srv/remoteps.ps1 ${var.windocker1_name}.${var.dc_name} /home/${var.linadmin}/adconfig/dockerinstall.ps1 >>/home/${var.linadmin}/adconfig/adconfig.log",
 	"kdestroy"
