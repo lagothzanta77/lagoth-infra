@@ -4,7 +4,7 @@
 
   * Windows AD Domain Controller - deployed from [borgWinTemplate](../borgwin_template/README.md)
   * Windows Server (Domain Member) with Docker and Windows Admin Center - deployed from [borgWinTemplate](../borgwin_template/README.md)
-  * Debian/GNU Linux Server (Domain Member) to use as gateway for AD - deployed from [borgLinTemplate](../borglin_template/generiso.sh)
+  * Debian/GNU Linux Server (Domain Member) with [PSWSMan](https://www.powershellgallery.com/packages/PSWSMan/2.3.1) to use as gateway for AD - deployed from [borgLinTemplate](../borglin_template/generiso.sh)
 
 ## Features
 
@@ -106,4 +106,7 @@
 | [...Complete the Windows Server to use Windows Admin Center...](https://youtu.be/k2pxW-EK4Us)                         | 00:35           | 00:48        | 13          |
 | [...Complete the deployment and test the Windows Admin Center](https://youtu.be/MPY0Z0QxJqU)                          | 00:49           | 01:00        | 11          |
 | [Check the AD environment with Windows 10 RSAT modules and shut down the infrastructure](https://youtu.be/jGsAEJZ8c5s)| 01:00           | 01:15        | 15          |
+
+> [!NOTE]
+> MMC DNS console output after registerdns fix : [here](../docs_images/winadserver_linux_regdns.png)
 
