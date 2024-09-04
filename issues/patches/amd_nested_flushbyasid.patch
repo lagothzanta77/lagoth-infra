@@ -1,0 +1,17 @@
+diff -Nrup linux-source-6.1/arch/x86/kvm/svm/svm.c linux-source-6.1-new/arch/x86/kvm/svm/svm.c
+--- linux-source-6.1/arch/x86/kvm/svm/svm.c	2024-08-19 06:00:07.000000000 +0200
++++ linux-source-6.1-new/arch/x86/kvm/svm/svm.c	2024-09-04 08:00:19.000000000 +0200
+@@ -4922,6 +4922,13 @@ static __init void svm_set_cpu_caps(void
+ 		kvm_cpu_cap_set(X86_FEATURE_SVM);
+ 		kvm_cpu_cap_set(X86_FEATURE_VMCBCLEAN);
+ 
++		/*
++		 * KVM currently flushes TLBs on *every* nested SVM transition,
++		 * and so for all intents and purposes KVM supports flushing by
++		 * ASID, i.e. KVM is guaranteed to honor every L1 ASID flush.
++		 */
++		kvm_cpu_cap_set(X86_FEATURE_FLUSHBYASID);
++
+ 		if (nrips)
+ 			kvm_cpu_cap_set(X86_FEATURE_NRIPS);
+ 

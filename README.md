@@ -40,6 +40,7 @@ The following systems will be installed automatically:
 ## Known Bugs
 
   * The `lowmem` boot parameter for Debian can cause `console-setup-linux` to become confused
+  * ESXI 8 guest VMs don't work in nested environment with Bookworm-based 6.1.x (<=6.1.106) kernel because an [important patch](issues/patches/amd_nested_flushbyasid.patch) is missing from the mainline 6.1.x kernel tree. More information is [here](https://lists.proxmox.com/pipermail/pve-devel/2023-October/059540.html). Screenshots of this bug are [here](issues/images/esxi8_without_patch.png) (without patch) and [here](issues/images/esxi8_with_patch.png) (with patch).
 
 ## Clean Code Guidelines
 
