@@ -5,7 +5,7 @@ This system offers the following features:
   * Debian bookworm
   * Authentication via SSH key for a single user only from the 
 Terraform CLI system
-  * Preconfigured nft firewall rules
+  * Pre-configured nft firewall rules
   * Manageable virtual machine via telnet and spice
   * Disabled ipv6
   * Disabled user passwords (include root)
